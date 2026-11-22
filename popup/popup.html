@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/48.png" alt="" class="logo">
+    <div class="title">
+      <strong>Nilamova</strong>
+      <small id="statusText"></small>
+    </div>
+    <button id="langBtn" class="chip" title="Language">हि / EN</button>
+  </header>
+
+  <button id="power" class="power" aria-pressed="true">
+    <span class="power-icon">⏻</span>
+  </button>
+
+  <section class="site" id="siteBox">
+    <div class="site-host" id="host"></div>
+    <label class="row">
+      <span data-t="blockOnSite"></span>
+      <input type="checkbox" id="siteToggle" class="switch">
+    </label>
+  </section>
+
+  <section class="stats">
+    <div><b id="pageCount">0</b><span data-t="thisPage"></span></div>
+    <div><b id="totalCount">0</b><span data-t="total"></span></div>
+    <div><b id="popupCount">0</b><span data-t="popups"></span></div>
+    <div><b id="ytCount">0</b><span data-t="ytAds"></span></div>
+  </section>
+
+  <section class="actions">
+    <button id="pickBtn" class="btn primary" data-t="pick"></button>
+    <button id="clearCustomBtn" class="btn ghost" data-t="clearCustom" hidden></button>
+    <button id="reportBtn" class="btn" data-t="report"></button>
+    <button id="donateBtn" class="btn donate" data-t="donate" hidden></button>
+  </section>
+
+  <details class="settings">
+    <summary data-t="settings"></summary>
+    <label class="row"><span data-t="c_ads"></span><input type="checkbox" class="switch" data-cat="ads"></label>
+    <label class="row"><span data-t="c_privacy"></span><input type="checkbox" class="switch" data-cat="privacy"></label>
+    <label class="row"><span data-t="c_annoyances"></span><input type="checkbox" class="switch" data-cat="annoyances"></label>
+    <label class="row"><span data-t="c_antiadblock"></span><input type="checkbox" class="switch" data-cat="antiadblock"></label>
+    <label class="row"><span data-t="c_malware"></span><input type="checkbox" class="switch" data-cat="malware"></label>
+    <label class="row"><span data-t="o_popup"></span><input type="checkbox" class="switch" data-opt="popupBlock"></label>
+    <label class="row"><span data-t="o_youtube"></span><input type="checkbox" class="switch" data-opt="youtube"></label>
+    <div class="row small">
+      <span id="sinceText"></span>
+      <button id="resetBtn" class="link" data-t="reset"></button>
+    </div>
+  </details>
+
+  <footer>
+    <a href="../pages/privacy.html" target="_blank" data-t="privacy"></a>
+    <span>v1.2.1</span>
+  </footer>
+
+  <script src="../config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
